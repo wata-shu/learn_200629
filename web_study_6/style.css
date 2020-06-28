@@ -1,0 +1,52 @@
+body{
+    width: 1000px;
+    box-sizing: border-box;
+}
+.itemlist{
+    display: flex;
+    background-color: crimson;
+    height: 200px;
+    width: 1000px;
+    /* box-sizing: border-box; */
+}
+.item1{
+    background-color: aqua;
+    /* flexプロパティは必ず親のコンテント内のサイズにとどめることができる
+    今回親（itemlist）が1000pxにも関わらずitem1,2をそれぞれ1000pxにしても2000pxとはならず、
+    500pxずつ配分される */
+    /* どのように配置するかをきめることができる */
+    /* フレックスプロパティ */
+    /* flex: 3; */
+    /* flex: 1は1000pxを１対１で配分する指定 */
+    /* flex-grow: 1はitemに対して残りの700pxを１対１で配分する指定 */
+    /* flex-grow: 6; */
+    /* flex-shrink: はflex-growの逆のプロパティ */
+    /* オーバーした分をどのように縮めるか？ */
+    /* width: 1000px; */
+
+    /* shrinkを1:2の指定にした場合、はみ出した1000pxを333.3px、666.6pxの割合に変換し1000pxから引く */
+    /* flex-shrink: 1; */
+    /* flex-basis: 基礎部分をどのくらいの割合で保持するか？のプロパティ */
+    flex-basis: 100px;
+}
+.item2{
+    background-color: chartreuse;
+    /* flex: 2; */
+    /* flex-grow: 1; */
+    /* width: 1000px; */
+    /* flex-shrink: 2; */
+    flex-basis: 200px;
+
+}
+.barlist{
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    /* box-sizing: border-box; */
+}
+.bar{
+    background-color: green;
+
+    width: 100px;
+    border: black solid 0.5px;
+}
